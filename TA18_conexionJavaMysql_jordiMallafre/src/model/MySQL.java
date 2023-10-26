@@ -78,9 +78,9 @@ public class MySQL {
 			query = "CREATE DATABASE " + name;
 			st.executeUpdate(query);
 			closeConnectionNotMessage();
-			connectionSQLDatabase("root", "root", name);
 			System.out.println("Base de datos creada exitosamente");
 			System.out.println();
+			connectionSQLDatabase("root", "root", name);
 		} catch (SQLException e) {
 			Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, e);
 		}
