@@ -104,7 +104,7 @@ public class MySQL {
 	public void insertsData(String db, String nameTabla, String insert) {
 		try {
 			useDatabase(db);
-
+			System.out.println(consegirColumnas(db, nameTabla));
 			String query = "INSERT INTO " + nameTabla + " (" + consegirColumnas(db, nameTabla) + ") VALUES " + insert
 					+ ";";
 			Statement st = this.conexion.createStatement();
