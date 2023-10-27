@@ -9,13 +9,13 @@ public class UtilEjercicio07 {
 	String columnasProductos = "codigo INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(100) NOT NULL, precio INT NOT NULL";
 	String insertsProductos = "(\"Lemonade - Pineapple Passion\",23),(\"Parsley - Dried\", 90),(\"Lobster - Canned Premium\",3),"
 			+ "(\"Lamb Tenderloin Nz Fr\",43), (\"Pasta - Penne Primavera, Single\",64)";
-	String deletePiezas = "codigo=3";
+	String deleteProductos = "codigo=3";
 
 	String tablaCajeros = "cajeros";
 	String columnasCajeros = "codigo INT AUTO_INCREMENT PRIMARY KEY,nom_apels VARCHAR(255) NOT NULL";
-	String insertsProveedores = "(\"Rafaellle Gunning\"), (\"Sophia Houlridge\"), (\"Arlinda Bottrell\"), (\"Chandra Bice\"),"
+	String insertsCajeros = "(\"Rafaellle Gunning\"), (\"Sophia Houlridge\"), (\"Arlinda Bottrell\"), (\"Chandra Bice\"),"
 			+ "(\"Jeannette Aish\")";
-	String deleteProveedores = "codigo=3";
+	String deleteCajeros = "codigo=3";
 	
 	String tablaMaquinasRegistradores = "maquinas_registradoras";
 	String columnasMaquinasRegistradores = "codigo INT AUTO_INCREMENT PRIMARY KEY, piso INT NOT NULL";
@@ -40,7 +40,7 @@ public class UtilEjercicio07 {
 		utilMysql.crearTabla(baseDatos, tablaVenta, columnasVenta);
 
 		utilMysql.insertarDatos(baseDatos, tablaProductos, insertsProductos);
-		utilMysql.insertarDatos(baseDatos, tablaCajeros, insertsProveedores);
+		utilMysql.insertarDatos(baseDatos, tablaCajeros, insertsCajeros);
 		utilMysql.insertarDatos(baseDatos, tablaMaquinasRegistradores, insertsMaquinasRegistradores);
 		utilMysql.insertarDatos(baseDatos, tablaVenta, insertsVenta);
 		
@@ -49,10 +49,10 @@ public class UtilEjercicio07 {
 		utilMysql.mostrarDatos(baseDatos, tablaMaquinasRegistradores);
 		utilMysql.mostrarDatos(baseDatos, tablaVenta);
 
-		utilMysql.eliminarDatos(baseDatos, tablaProductos, deletePiezas);
+		utilMysql.eliminarDatos(baseDatos, tablaProductos, deleteProductos);
 		utilMysql.mostrarDatos(baseDatos, tablaProductos);
 
-		utilMysql.eliminarDatos(baseDatos, tablaCajeros, deleteProveedores);
+		utilMysql.eliminarDatos(baseDatos, tablaCajeros, deleteCajeros);
 		utilMysql.mostrarDatos(baseDatos, tablaCajeros);
 		
 		utilMysql.eliminarDatos(baseDatos, tablaMaquinasRegistradores, deleteMaquinasRegistradores);
