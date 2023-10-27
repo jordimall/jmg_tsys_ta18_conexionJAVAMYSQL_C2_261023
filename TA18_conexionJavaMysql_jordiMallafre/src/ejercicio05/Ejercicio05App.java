@@ -1,4 +1,4 @@
-package ejercicio5;
+package ejercicio05;
 
 import utils.UtilEjercicio05;
 
